@@ -10,7 +10,8 @@ const httpOptions = {
 
 @Injectable()
 export class TaskService {
-   private userUrl = 'http://localhost:5005';
+  //private userUrl = 'http://localhost:8080/user-portal/user';
+  private userUrl = 'http://localhost:8090';
   constructor(private http: HttpClient) { }
 
   public addTask(task) {

@@ -28,17 +28,20 @@ export class AddtaskComponent implements OnInit {
 
    addTask(): void {
 
-    console.log(this.task);
+    console.log(this.task.task);
     this.task.status="active";
     console.log(this.task.status);
-    this.taskervice.addTask(this.task)
+   this.taskervice.addTask(this.task)
         .subscribe( data => {
         });
 
   };
 
+  /*addTask(task, parentTask,startDate, endDate) {
+    this.taskervice.addTask(task,parentTask,startDate,endDate);
+  }*/
   ngOnInit() {
-     this.addTask();
+     
   }
   formatLabel(value: number | null) {
     if (!value) {

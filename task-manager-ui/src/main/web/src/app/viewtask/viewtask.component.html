@@ -36,22 +36,22 @@
 | filter : 'startDate' : task.startDate | filter : 'endDate' : task.endDate ; let i = index">
 <div class="row">
        
-          <label class="col-md-2">Task</label>
-          <label class="col-md-2">Parent</label>
-          <label class="col-md-2">Priority</label>
-          <label class="col-md-2">Start</label>
-          <label class="col-md-2">End</label>
+          <label class="col-md-2" style="margin-bottom: 10px;">Task</label>
+          <label class="col-md-2" style="margin-bottom: 10px;">Parent</label>
+          <label class="col-md-2" style="margin-bottom: 10px;">Priority</label>
+          <label class="col-md-2" style="margin-bottom: 10px;">Start</label>
+          <label class="col-md-2" style="margin-bottom: 10px;">End</label>
        
 </div>
 <div class="row">
-        <div class="col-md-2">{{task.task}}</div>
-        <div class="col-md-2">{{task.parentTask}}</div>
-        <div class="col-md-2">{{task.priority}}</div>
-        <div class="col-md-2">{{task.startDate | date:'dd-MM-yyyy'}}</div>
-        <div class="col-md-2">{{task.endDate  | date:'dd-MM-yyyy'}}</div>
+        <div class="col-md-2" style="background-color: lightgray;height: 55px;text-align: center;padding-top: 15px;margin-right: 10px;">{{task.task}}</div>
+        <div class="col-md-2" style="background-color: lightgray;height: 55px;text-align: center;padding-top: 15px;margin-right: 10px;">{{task.parentTask}}</div>
+        <div class="col-md-2" style="text-align: left;">{{task.priority}}</div>
+        <div class="col-md-2" style="text-align: left;">{{task.startDate | date:'dd-MM-yyyy'}}</div>
+        <div class="col-md-2" style="text-align: left;">{{task.endDate  | date:'dd-MM-yyyy'}}</div>
         <div *ngIf="task.status === 'active'">
-        <button type="button" (click)="editTask(task)" class="btn btn-success" >Edit</button> 
-        <button type="button" class="btn btn-success" (click)="endTask(task)">End Task</button> 
+        <button type="button" (click)="editTask(task)" class="btn btn-secondary" >Edit</button>&nbsp;&nbsp;
+        <button type="button" class="btn btn-secondary" (click)="endTask(task)">End Task</button> 
         </div>
 </div>                
 <hr>
