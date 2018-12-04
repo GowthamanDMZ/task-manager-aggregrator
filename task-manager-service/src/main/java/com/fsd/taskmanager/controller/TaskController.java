@@ -22,7 +22,6 @@ public class TaskController {
 	TaskService taskService;
 	
 	
-	/*@RequestMapping(value="/addTask", method = RequestMethod.POST, produces = "application/json")*/
 	@RequestMapping(value="/addTask", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
 	public String addTask(@RequestBody Task task) {

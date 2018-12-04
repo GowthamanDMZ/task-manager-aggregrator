@@ -36,8 +36,8 @@ public class TaskService {
 				 
 		 String updateParentQry = "update parent_task set parent_task =? where parent_id =? ";
 		 Object[] parentObj = {task.getParentTask(),task.getParentTaskId()};
-		 int[] parentObjTypes = {Types.VARCHAR,Types.INTEGER};
-		 jdbcTemplate.update(updateParentQry,parentObj,parentObjTypes);
+		 int[] parentObjType = {Types.VARCHAR,Types.INTEGER};
+		 jdbcTemplate.update(updateParentQry,parentObj,parentObjType);
 	}
 
 	public List<Task> getAllTasks() {
@@ -49,8 +49,8 @@ public class TaskService {
 	public List<Task> deleteTask(int task_id) {
 		 String updateTaskSQL = "update task set status='inactive' where task_id =? ";
 		 Object[] params = {task_id};
-		 int[] types = {Types.INTEGER};
-		 jdbcTemplate.update(updateTaskSQL,params,types);
+		 int[] type = {Types.INTEGER};
+		 jdbcTemplate.update(updateTaskSQL,params,type);
 		 return getAllTasks();
 	}
 
